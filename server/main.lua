@@ -504,6 +504,7 @@ AddEventHandler("es:setMoney", function(user, value) ESX.GetPlayerFromId(user).s
 AddEventHandler("es:addMoney", function(user, value) ESX.GetPlayerFromId(user).addMoney(value, true) end)
 AddEventHandler("es:removeMoney", function(user, value) ESX.GetPlayerFromId(user).removeMoney(value, true) end)
 AddEventHandler("es:set", function(user, key, value) ESX.GetPlayerFromId(user).set(key, value, true) end)
+AddEventHandler("es:getPlayerFromId", function(user,cb) local xPly = ESX.GetPlayerFromId(user) cb(xPly) end)
 
 AddEventHandler("es_db:doesUserExist", function(identifier, cb)
 	cb(true)
